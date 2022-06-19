@@ -1,7 +1,26 @@
-let students = require('../routers/students.js');
+"use strict";
+
+console.log("Running server -- stud-controller.js");
+
+const students = [
+  {
+    id: 1,
+    title: "Student #1",
+    isPublic: true,
+  },
+  {
+    id: 2,
+    title: "Student #2",
+    isPublic: true,
+  },
+  {
+    id: 3,
+    title: "Student #3",
+    isPublic: true,
+  },
+];
 
 class StudCtrl {
-  
   static async getStudentsController(request, response) {
     return response.send({
       data: students,
@@ -35,14 +54,15 @@ class StudCtrl {
   static async editStudentsController(request, response) {
     const requestQuery = request.query;
 
-    return students = students.map((e) => {
-      if (e.id === requestQuery.id) {
-        e.title = requestQuery.title;
+    students.map((elem) => {
+      if (elem.id === +requestQuery.id) {
+        elem.title = requestQuery.title;
       }
+    });
+    return response.send({
+      data: students,
     });
   }
 }
 
-module.exports = {
-  StudCtrl,
-};
+module.exports = StudCtrl;

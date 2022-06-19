@@ -1,12 +1,14 @@
-import express from "express";
+"use strict";
+
+const port = process.env.MY_APP_PORT || 3000;
+
+const express = require("express");
+const studRouter = require("./routers/stud-router.js");
+
 const app = express();
-const port = process.env.MY_APP_PORT;
-import { StudCtrl } from './controllers/studCtrl.js';
+const json = express.json();
+app.use(json);
 
+app.use("/students", studRouter);
 
-app.get("/students", StudCtrl.getStudentsController);
-app.post("/students", StudCtrl.postStudentsController);
-app.delete("/students", StudCtrl.deleteStudentsController);
-app.put("/students", StudCtrl.editStudentsController);
-
-app.listen(port || 3000);
+app.listen(port, () => console.log("Running server -- index.js"));
