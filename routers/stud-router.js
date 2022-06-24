@@ -2,7 +2,7 @@
 
 const express = require("express");
 const router = express.Router();
-const StudCtrl = require("../controllers/stud-cntr.js");
+const StudCtrl = require("../controllers/stud-ctrl.js");
 
 console.log("Running server -- stud-router.js");
 
