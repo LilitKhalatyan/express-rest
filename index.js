@@ -15,7 +15,8 @@ app.use(json);
     await mongoose.connect('mongodb://localhost:27017/university');
 })();
 
-
+const staticFiles = express.static('./front');
+app.use(staticFiles);
 
 app.use("/students", studRouter);
 app.use("/books", bookRouter);

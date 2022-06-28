@@ -51,7 +51,10 @@ class StudCtrl {
 
     const result = await Students.updateOne(
       {_id: requestQuery._id}, 
-      {title: requestBody.title}
+      {firstName: requestBody.firstName},
+      {lastName: requestBody.lastName},
+      {age: requestBody.age},
+      {lastModified: Date.now()}
       );
 
     // console.log("deleted document", result);
