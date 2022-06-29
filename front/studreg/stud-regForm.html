@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+  </head>
+  <body>
+    <form method='GET' enctype='multipart/form-data'>
+      <h1>Student Registration Form</h1>
+      <div>
+        <label for='firstName'><b>First Name</b></label>
+        <input type='text' id='firstName' name='firstName' id='firstName' required placeholder='Your First Name'/>
+      </div>
+
+
+      <br></br>
+      <div>
+        <label for='lastName'><b>Last Name</b></label>
+        <input type='text' id='lastName' name='lastName' id='lastName' required placeholder='Your Last Name'/>
+      </div>
+
+
+      <br></br>
+      <div>
+        <label for='email'><b>E-mail</b></label>
+        <input type='email' id="email" name='email' id='email' />
+      </div>
+
+      <br></br>
+      <div>
+        <label for='age'><b>Age</b></label>
+        <input type='number' id='age' name='age' min='1' max='100' step='1'/>
+      </div>
+
+      <!-- <br></br>
+      <div>
+        <label for='region'><b>Your Region</b></label>
+        <select name='region' id='region' >
+          <option value='yerevan'>Yerevan</option>
+          <option value='aragatsotn'>Aragatsotn</option>
+          <option value='ararat'>Ararat</Aption>
+          <option value='armavir'>Armavir</Aption>
+          <option value='gegharkunik'>Gegharkunik</option>
+          <option value='kotayk'>Kotayk</option>
+          <option value='lori'>Lori</option>
+          <option value='shirak'>Shirak</option>
+          <option value='syunik'>Syunik</option>
+          <option value='tavush'>Tavush</option>
+          <option value='vayotsDzor'>Vayots Dzor</option>
+        </select>
+      </div>
+
+      <br></br>
+      <div>
+        <b>Cities you would like/are able to move</b>
+        <div>
+          <label for='yerevan'>Yerevan</label>
+          <input type='checkbox' name='yerevan' id='yerevan'/>
+        </div>
+        <div>
+          <label for='gyumree'>Gyumree</label>
+          <input type='checkbox' name='gyumree' id='gyumree'/>
+        </div>
+        <div>
+          <label for='vanadzor'>Vanadzor</label>
+          <input type='checkbox' name='vanadzor' id='vanadzor'/>
+        </div>
+        <div>
+          <label for='kapan'>Kapan</label>
+          <input type='checkbox' name='kapan' id='kapan'/>
+        </div>
+        <div>
+          <label for='sisian'>Sisian</label>
+          <input type='checkbox' name='sisian' id='sisian'/>
+        </div>
+        <div>
+          <label for='dilijan'>Dilijan</label>
+          <input type='checkbox' name='dilijan' id='dilijan'/>
+        </div>
+
+        <br></br>
+        <div>
+          <label for='date'><b>Starting from/Available Date</b></label>
+          <input type='datetime-local' name='date' id='date'/>
+        </div>
+
+        <br></br>
+        <div>
+          <b>Gender</b>
+          <div>
+            <label for='male'>Male</label>
+            <input type='radio' name='gender' id='male' value='male'/>
+          </div>
+          <div>
+            <label for='female'>Female</label>
+            <input type='radio' name='gender' id='female' value='female'/>
+          </div>
+        </div>
+
+        <br></br>
+        <div>
+            <label for='phone'><b>Phone Number</b></label>
+            <input id='phone' name='phone'></input>
+        </div>
+
+        <br></br>
+        <div>
+            <label for='about'><b>Anything else you would like to tell about you</b><div></div></label>
+            <textarea id='about' name='about'></textarea>
+        </div>
+
+        <br></br>
+        <div>
+          <label for="file"><b>Attach your resume</b></label>
+          <input id="file" type="file" name="file">
+        </div>
+
+        <br></br>
+        <div>
+          <label for='git'><b>Your GitHub Account</b></label>
+          <input type='' name='git' id='git'/>
+        </div>
+
+        <br></br>
+        <div>
+          <label for='linkedin'><b>Your LinkedIn Account</b></label>
+          <input type='' name='linkedin' id='linkedin'/>
+        </div>
+
+      <br></br>
+      <div>
+        <label>
+          <b>Password</b>
+            <input type='password' name='Password' required/>
+        </label>
+      </div> -->
+
+
+      <br></br>
+      <button id="info" type='submit'>Submit</button>
+      <br></br>
+      <a href="../index.html">Back to Home Page</a>
+      <br></br>
+      <a href="../studdb/stud-info.html">Students Page</a>
+      <br></br>
+      
+    </form>
+    <script src="reg.js"></script>
+  </body>
+</html>

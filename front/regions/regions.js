@@ -4,16 +4,19 @@ console.log('Hello from reg.js');
 
 const saveBtn = document.getElementById('info');
 saveBtn.addEventListener('click', async () => {
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
+    const nameArm = document.getElementById('regionNameArm').value;
+    const nameEn = document.getElementById('regionNameEn').value;
+    const kay = document.getElementById('kay').value;
+
     const requestBody = {
-        firstName: firstName,
-        lastName: lastName
+        kay: kay,
+        nameArm: nameArm,
+        nameEn: nameEn
     };
     console.log('Request body', requestBody);
 
     try {
-        const response = await fetch("http://localhost:3000/students", {
+        const response = await fetch("http://localhost:3000/regions", {
           method: "POST",
           body: JSON.stringify(requestBody),
           headers: {

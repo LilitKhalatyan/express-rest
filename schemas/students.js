@@ -13,10 +13,14 @@ const studentSchema = new Schema(
         lastName: {
             type: String,
             // required: true,
+        },
+        email: {
+            type: String,
+        // required: true,
+        },
+        age: {
+            type: Number,
         }
-        // age: {
-        //     type: Number,
-        // },
         // isFreezed: {
         //     type: Boolean,
         //     default: false,
@@ -33,7 +37,7 @@ const studentSchema = new Schema(
         //     type: Date,
         //     default: Date.now,
         // }
-    }
+    }, {collection: 'students'}
 );
 
 const Student = mongoose.model('Student', studentSchema);
