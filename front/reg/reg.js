@@ -20,9 +20,12 @@ saveBtn.addEventListener('click', async () => {
             "Content-Type": "application/json"
           }
         });
+        const body = await response.json();
+        console.log(body); 
+
       } catch (error) {
         console.log('error', error);
       }
 
-    const saveData = document.getElementById("saveData");
+    // const saveData = document.getElementById("saveData");
 });
