@@ -6,6 +6,10 @@ const { Schema } = mongoose;
 
 const studentSchema = new Schema(
     {
+        username: {
+            type: String,
+            // required: true,
+        },
         firstName: {
             type: String,
             // required: true,
@@ -20,6 +24,12 @@ const studentSchema = new Schema(
         },
         age: {
             type: Number,
+        },
+        region: {
+            type: String,
+        },
+        studentPassword: {
+            type: String,
         }
         // isFreezed: {
         //     type: Boolean,

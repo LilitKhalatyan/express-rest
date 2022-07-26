@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("Running server -- stud-controller.js");
+console.log("Running server -- student-controller.js");
 
 const Students = require( '../schemas/students.js');
 

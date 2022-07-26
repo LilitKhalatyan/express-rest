@@ -3,9 +3,9 @@
 const port = process.env.MY_APP_PORT || 3000;
 
 const express = require("express");
-const studRouter = require("./routers/stud-router.js");
-const bookRouter = require("./routers/book-router.js");
+const studentRouter = require("./routers/student-router.js");
 const regionRouter = require("./routers/region-router.js");
+const countryRouter = require("./routers/country-router.js");
 const mongoose = require("mongoose");
 
 const app = express();
@@ -19,9 +19,9 @@ app.use(json);
 const staticFiles = express.static('./front');
 app.use(staticFiles);
 
-app.use("/students", studRouter);
-app.use("/books", bookRouter);
+app.use("/students", studentRouter);
 app.use("/regions", regionRouter);
+app.use("/countries", countryRouter);
 
 
-app.listen(port, () => console.log("Running server -- index.js"));
+app.listen(port, () => console.log(`Running server -- ${port} at index.js`));

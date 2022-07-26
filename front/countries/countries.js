@@ -1,25 +1,22 @@
 // const { response } = require("express");
 
-console.log('Hello from reg.js');
+console.log('Hello from countries.js');
 
 const saveBtn = document.getElementById('info');
 saveBtn.addEventListener('click', async () => {
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('email').value;
-    const age = document.getElementById('age').value;
-
+    const nameArm = document.getElementById('countryNameArm').value;
+    const nameEn = document.getElementById('countryNameEn').value;
+    const kay = document.getElementById('kay').value;
 
     const requestBody = {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        age: age
+        kay: kay,
+        nameArm: nameArm,
+        nameEn: nameEn
     };
     console.log('Request body', requestBody);
 
     try {
-        const response = await fetch("http://localhost:3000/students", {
+        const response = await fetch("http://localhost:3000/countries", {
           method: "POST",
           body: JSON.stringify(requestBody),
           headers: {
